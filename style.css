@@ -10,7 +10,7 @@
 
 .section{padding:110px max(5vw,calc((100vw - var(--max))/2))}.sectionIntro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.55fr);gap:70px;align-items:end;margin-bottom:54px}.sectionIntro .kicker{grid-column:1/-1}.sectionIntro h2{margin:20px 0 0;font-size:clamp(40px,5vw,62px);line-height:1.05;letter-spacing:-.045em;color:var(--navy)}.sectionIntro>p:last-child{margin:0;color:var(--muted);line-height:1.75}
 
-.serviceGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;border:0}.serviceCard{display:grid;grid-template-columns:48px 1fr;grid-template-rows:auto auto 1fr auto;column-gap:20px;min-height:265px;padding:30px;border:1px solid var(--line);border-radius:16px;background:#fff;position:relative;transition:.25s}.serviceCard:hover{border-color:#9abcf3;box-shadow:0 18px 45px #164f9d14;transform:translateY(-3px)}.cardNum{grid-column:1;grid-row:1/-1;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#edf4ff;color:var(--blue);font:650 11px var(--font-mono)}.cardIcon{display:none}.serviceCard h3{grid-column:2;margin:2px 0 13px;font-size:23px;line-height:1.25;color:var(--navy)}.serviceCard p{grid-column:2;margin:0;max-width:470px;color:var(--muted);font-size:15px;line-height:1.72}.serviceCard a{grid-column:2;position:static;margin-top:24px;align-self:end;display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-size:13px;font-weight:680}.serviceCard a span{margin:0}
+.serviceGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;border:0}.serviceCard{display:grid;grid-template-columns:44px 1fr;grid-template-rows:auto auto 1fr auto;column-gap:16px;min-height:198px;padding:24px 26px;border:1px solid var(--line);border-radius:14px;background:#fff;position:relative;transition:.25s}.serviceCard:hover{border-color:#9abcf3;box-shadow:0 18px 45px #164f9d14;transform:translateY(-3px)}.cardNum{grid-column:1;grid-row:1/-1;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#edf4ff;color:var(--blue);font:650 11px var(--font-mono)}.cardIcon{display:none}.serviceCard h3{grid-column:2;margin:1px 0 9px;font-size:21px;line-height:1.2;color:var(--navy)}.serviceCard p{grid-column:2;margin:0;max-width:470px;color:var(--muted);font-size:14px;line-height:1.58}.serviceCard a{grid-column:2;position:static;margin-top:16px;align-self:end;display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-size:13px;font-weight:680}.serviceCard a span{margin:0}
 
 .process{background:var(--navy);color:#fff}.process .sectionIntro{margin-bottom:45px}.sectionIntro.light h2{color:#fff}.sectionIntro.light em{color:#5ca4ff}.steps{display:grid;grid-template-columns:repeat(5,1fr);border:0;gap:12px}.step{display:block;padding:28px 22px;min-height:240px;border:1px solid #ffffff20;border-radius:14px;background:#ffffff08;transition:.25s}.step:hover{padding:28px 22px;background:#ffffff0f;border-color:#ffffff3b;transform:translateY(-3px)}.step>span{display:block;margin-bottom:55px;color:#62a8ff;font:600 11px var(--font-mono)}.step div{display:block}.step h3{margin:0 0 12px;font-size:19px}.step p{margin:0;color:#b8c3da;font-size:13px;line-height:1.65}
 
@@ -119,34 +119,28 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
 
 /* =========================================================
    DESTAQUE ÍRIS — CHATBOT
+   Versão mais compacta e limpa
    ========================================================= */
 
 .irisHighlight{
   position:relative;
   display:grid;
-  grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);
-  gap:40px;
+  grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);
+  gap:26px;
   align-items:center;
-  min-height:390px;
-  margin:0 0 28px;
-  padding:46px 52px;
+  min-height:310px;
+  margin:0 0 24px;
+  padding:34px 42px;
   overflow:hidden;
   border:1px solid #cfe0fb;
-  border-radius:22px;
-  background:
-    radial-gradient(circle at 78% 45%, #ddecff 0, #ddecff 18%, transparent 44%),
-    linear-gradient(135deg,#f8fbff 0%,#eef6ff 55%,#eaf3ff 100%);
-  box-shadow:0 20px 55px #164f9d10;
+  border-radius:18px;
+  background:linear-gradient(135deg,#f8fbff 0%,#eef6ff 58%,#e8f3ff 100%);
+  box-shadow:0 14px 36px #164f9d0d;
 }
 
+/* Remove a divisão vertical que deixava o bloco pesado */
 .irisHighlight:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:
-    linear-gradient(90deg,transparent 0 58%,#ffffff55 58% 59%,transparent 59%);
-  opacity:.6;
+  display:none;
 }
 
 .irisContent{
@@ -159,21 +153,21 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  margin-bottom:20px;
-  padding:8px 13px;
+  margin-bottom:14px;
+  padding:7px 11px;
   border-radius:999px;
   background:#dcecff;
   color:var(--blue);
-  font:700 11px var(--font-mono),monospace;
+  font:700 10px var(--font-mono),monospace;
   letter-spacing:.04em;
 }
 
 .irisContent h3{
   margin:0;
   color:var(--navy);
-  font-size:clamp(38px,4.4vw,58px);
-  line-height:1.02;
-  letter-spacing:-.045em;
+  font-size:clamp(34px,3.6vw,48px);
+  line-height:1.03;
+  letter-spacing:-.042em;
   font-weight:700;
 }
 
@@ -183,26 +177,26 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
 }
 
 .irisContent p{
-  max-width:560px;
-  margin:22px 0 0;
+  max-width:520px;
+  margin:16px 0 0;
   color:var(--muted);
-  font-size:17px;
-  line-height:1.7;
+  font-size:15px;
+  line-height:1.62;
 }
 
 .irisButton{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:14px;
-  margin-top:28px;
-  padding:16px 24px;
-  border-radius:11px;
+  gap:12px;
+  margin-top:22px;
+  padding:14px 20px;
+  border-radius:10px;
   background:var(--blue);
   color:#fff;
-  font-size:15px;
+  font-size:14px;
   font-weight:700;
-  box-shadow:0 12px 28px #0965f62b;
+  box-shadow:0 10px 22px #0965f624;
   transition:.25s;
 }
 
@@ -214,14 +208,14 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
 .irisVisual{
   position:relative;
   z-index:2;
-  min-height:300px;
+  min-height:240px;
 }
 
 .irisBackgroundCircle{
   position:absolute;
-  width:310px;
-  height:310px;
-  right:10px;
+  width:250px;
+  height:250px;
+  right:18px;
   top:50%;
   transform:translateY(-50%);
   border-radius:50%;
@@ -230,23 +224,23 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
 
 .irisPhone{
   position:absolute;
-  right:48px;
+  right:46px;
   top:50%;
-  width:178px;
-  height:292px;
+  width:146px;
+  height:238px;
   transform:translateY(-50%) rotate(7deg);
-  border:8px solid #08245b;
-  border-radius:31px;
+  border:7px solid #08245b;
+  border-radius:27px;
   background:#fff;
-  box-shadow:0 22px 45px #0b2c6324;
+  box-shadow:0 18px 36px #0b2c631e;
 }
 
 .irisPhoneSpeaker{
   position:absolute;
-  top:8px;
+  top:7px;
   left:50%;
-  width:55px;
-  height:6px;
+  width:46px;
+  height:5px;
   transform:translateX(-50%);
   border-radius:10px;
   background:#0a2b65;
@@ -254,15 +248,15 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
 
 .irisPhoneScreen{
   position:absolute;
-  inset:25px 9px 22px;
+  inset:22px 8px 19px;
   overflow:hidden;
-  border-radius:17px;
-  background:linear-gradient(180deg,#f7fbff 0%,#ffffff 100%);
+  border-radius:14px;
+  background:linear-gradient(180deg,#f7fbff 0%,#fff 100%);
   border:1px solid #d9e6f7;
 }
 
 .irisPhoneTop{
-  height:26px;
+  height:22px;
   border-bottom:1px solid #e0e9f5;
   background:#f8fbff;
 }
@@ -273,17 +267,17 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
   top:50%;
   display:grid;
   place-items:center;
-  width:82px;
-  height:82px;
+  width:66px;
+  height:66px;
   transform:translate(-50%,-50%);
   border-radius:50%;
   background:#25d366;
   color:#fff;
-  box-shadow:0 10px 24px #25d3663a;
+  box-shadow:0 8px 20px #25d36632;
 }
 
 .irisWhatsappIcon span{
-  font-size:35px;
+  font-size:28px;
   line-height:1;
   transform:rotate(-7deg);
 }
@@ -291,72 +285,77 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
 .irisPhoneHome{
   position:absolute;
   left:50%;
-  bottom:6px;
-  width:34px;
-  height:11px;
+  bottom:5px;
+  width:29px;
+  height:9px;
   transform:translateX(-50%);
   border:2px solid #0b5ddd;
   border-radius:10px;
 }
 
+/* Balão azul com a onda da VibeDupla em branco */
 .irisWaveBubble{
   position:absolute;
   z-index:5;
   left:18px;
-  top:66px;
-  width:126px;
-  height:94px;
+  top:56px;
+  width:108px;
+  height:78px;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:19px;
-  border-radius:24px;
+  border-radius:21px;
   background:linear-gradient(135deg,#0b65f7,#127cff);
-  box-shadow:0 18px 38px #0965f638;
+  box-shadow:0 14px 28px #0965f62c;
+}
+
+.irisWaveBubble:before{
+  content:"";
+  width:72px;
+  height:36px;
+  background:#fff;
+  -webkit-mask:url('assets/vibedupla-wave.png') center/contain no-repeat;
+  mask:url('assets/vibedupla-wave.png') center/contain no-repeat;
 }
 
 .irisWaveBubble:after{
   content:"";
   position:absolute;
-  right:18px;
-  bottom:-15px;
+  right:16px;
+  bottom:-13px;
   width:0;
   height:0;
-  border-left:17px solid transparent;
-  border-top:22px solid #127cff;
+  border-left:15px solid transparent;
+  border-top:19px solid #127cff;
 }
 
+/* A onda agora é renderizada pelo próprio CSS */
 .irisWave{
-  display:block;
-  width:100%;
-  height:auto;
-  object-fit:contain;
-  filter:grayscale(1) brightness(0) invert(1);
-  opacity:.98;
+  display:none;
 }
 
 .irisChatBubble{
   position:absolute;
   z-index:6;
-  right:0;
-  top:152px;
-  width:92px;
-  height:72px;
-  border:5px solid var(--blue);
-  border-radius:24px;
+  right:6px;
+  top:127px;
+  width:78px;
+  height:61px;
+  border:4px solid var(--blue);
+  border-radius:20px;
   background:#fff;
-  box-shadow:0 14px 32px #0b2d631a;
+  box-shadow:0 11px 25px #0b2d6317;
 }
 
 .irisChatBubble:after{
   content:"";
   position:absolute;
-  right:13px;
-  bottom:-16px;
-  width:22px;
-  height:22px;
-  border-right:5px solid var(--blue);
-  border-bottom:5px solid var(--blue);
+  right:11px;
+  bottom:-14px;
+  width:18px;
+  height:18px;
+  border-right:4px solid var(--blue);
+  border-bottom:4px solid var(--blue);
   background:#fff;
   transform:skewY(-35deg);
 }
@@ -364,47 +363,47 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
 .irisChatBubble span{
   position:absolute;
   top:50%;
-  width:22px;
-  height:6px;
+  width:18px;
+  height:5px;
   border-radius:999px;
   background:var(--blue);
 }
 
-.irisChatBubble span:first-child{left:18px}
-.irisChatBubble span:last-child{right:18px}
+.irisChatBubble span:first-child{left:15px}
+.irisChatBubble span:last-child{right:15px}
 
 .irisSpark{
   position:absolute;
   z-index:7;
-  width:5px;
-  height:22px;
+  width:4px;
+  height:18px;
   border-radius:999px;
   background:var(--blue);
 }
 
 .sparkOne{
-  right:20px;
+  right:22px;
   top:18px;
   transform:rotate(-7deg);
 }
 
 .sparkTwo{
-  right:2px;
-  top:27px;
+  right:6px;
+  top:26px;
   transform:rotate(34deg);
 }
 
 .sparkThree{
-  right:38px;
-  top:11px;
+  right:37px;
+  top:12px;
   transform:rotate(-28deg);
 }
 
-/* Ajustes responsivos do destaque da Íris */
 @media(max-width:900px){
   .irisHighlight{
     grid-template-columns:1fr;
-    padding:40px;
+    gap:18px;
+    padding:34px;
   }
 
   .irisContent{
@@ -412,7 +411,7 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
   }
 
   .irisVisual{
-    min-height:320px;
+    min-height:260px;
   }
 
   .irisBackgroundCircle{
@@ -428,47 +427,71 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
   }
 
   .irisWaveBubble{
-    left:calc(50% - 170px);
+    left:calc(50% - 145px);
   }
 
   .irisChatBubble{
-    right:calc(50% - 175px);
+    right:calc(50% - 150px);
   }
 
-  .sparkOne{right:calc(50% - 182px)}
-  .sparkTwo{right:calc(50% - 202px)}
-  .sparkThree{right:calc(50% - 164px)}
+  .sparkOne{right:calc(50% - 157px)}
+  .sparkTwo{right:calc(50% - 174px)}
+  .sparkThree{right:calc(50% - 140px)}
 }
 
 @media(max-width:560px){
-  .irisHighlight{
-    gap:20px;
+  .serviceGrid{
+    gap:12px;
+  }
+
+  .serviceCard{
+    grid-template-columns:36px 1fr;
     min-height:0;
-    padding:28px 22px 30px;
-    border-radius:18px;
+    padding:21px;
+    column-gap:12px;
+  }
+
+  .serviceCard h3{
+    font-size:20px;
+  }
+
+  .serviceCard p{
+    font-size:14px;
+    line-height:1.55;
+  }
+
+  .serviceCard a{
+    margin-top:14px;
+  }
+
+  .irisHighlight{
+    gap:8px;
+    min-height:0;
+    padding:25px 20px 18px;
+    border-radius:16px;
   }
 
   .irisTag{
-    margin-bottom:16px;
+    margin-bottom:12px;
   }
 
   .irisContent h3{
-    font-size:38px;
+    font-size:34px;
   }
 
   .irisContent p{
-    font-size:15px;
-    line-height:1.65;
+    font-size:14px;
   }
 
   .irisButton{
     width:100%;
     justify-content:space-between;
+    margin-top:18px;
   }
 
   .irisVisual{
-    min-height:275px;
-    transform:scale(.9);
+    min-height:235px;
+    transform:scale(.88);
     transform-origin:center top;
   }
 }
