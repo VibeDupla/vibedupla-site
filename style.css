@@ -116,3 +116,359 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
 .emailClose{position:absolute;top:16px;right:18px;width:38px;height:38px;border:0;border-radius:50%;background:var(--soft);color:var(--navy);font-size:25px;cursor:pointer}
 .emailChoices{display:grid;gap:10px;margin-top:28px}.emailChoices a,.emailChoices button{display:flex;align-items:center;justify-content:space-between;width:100%;padding:15px 17px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--navy);font:650 14px var(--font);cursor:pointer;transition:.2s}.emailChoices a:hover,.emailChoices button:hover{border-color:#8eb6f5;background:var(--soft);color:var(--blue)}
 @media(max-width:560px){.emailDialog{padding:34px 24px}.emailDialog h2{font-size:32px}}
+
+/* =========================================================
+   DESTAQUE ÍRIS — CHATBOT
+   ========================================================= */
+
+.irisHighlight{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);
+  gap:40px;
+  align-items:center;
+  min-height:390px;
+  margin:0 0 28px;
+  padding:46px 52px;
+  overflow:hidden;
+  border:1px solid #cfe0fb;
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 78% 45%, #ddecff 0, #ddecff 18%, transparent 44%),
+    linear-gradient(135deg,#f8fbff 0%,#eef6ff 55%,#eaf3ff 100%);
+  box-shadow:0 20px 55px #164f9d10;
+}
+
+.irisHighlight:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,transparent 0 58%,#ffffff55 58% 59%,transparent 59%);
+  opacity:.6;
+}
+
+.irisContent{
+  position:relative;
+  z-index:3;
+  max-width:560px;
+}
+
+.irisTag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:20px;
+  padding:8px 13px;
+  border-radius:999px;
+  background:#dcecff;
+  color:var(--blue);
+  font:700 11px var(--font-mono),monospace;
+  letter-spacing:.04em;
+}
+
+.irisContent h3{
+  margin:0;
+  color:var(--navy);
+  font-size:clamp(38px,4.4vw,58px);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  font-weight:700;
+}
+
+.irisContent h3 em{
+  color:var(--blue);
+  font-style:normal;
+}
+
+.irisContent p{
+  max-width:560px;
+  margin:22px 0 0;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.7;
+}
+
+.irisButton{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin-top:28px;
+  padding:16px 24px;
+  border-radius:11px;
+  background:var(--blue);
+  color:#fff;
+  font-size:15px;
+  font-weight:700;
+  box-shadow:0 12px 28px #0965f62b;
+  transition:.25s;
+}
+
+.irisButton:hover{
+  background:#0054d6;
+  transform:translateY(-2px);
+}
+
+.irisVisual{
+  position:relative;
+  z-index:2;
+  min-height:300px;
+}
+
+.irisBackgroundCircle{
+  position:absolute;
+  width:310px;
+  height:310px;
+  right:10px;
+  top:50%;
+  transform:translateY(-50%);
+  border-radius:50%;
+  background:#dcecff;
+}
+
+.irisPhone{
+  position:absolute;
+  right:48px;
+  top:50%;
+  width:178px;
+  height:292px;
+  transform:translateY(-50%) rotate(7deg);
+  border:8px solid #08245b;
+  border-radius:31px;
+  background:#fff;
+  box-shadow:0 22px 45px #0b2c6324;
+}
+
+.irisPhoneSpeaker{
+  position:absolute;
+  top:8px;
+  left:50%;
+  width:55px;
+  height:6px;
+  transform:translateX(-50%);
+  border-radius:10px;
+  background:#0a2b65;
+}
+
+.irisPhoneScreen{
+  position:absolute;
+  inset:25px 9px 22px;
+  overflow:hidden;
+  border-radius:17px;
+  background:linear-gradient(180deg,#f7fbff 0%,#ffffff 100%);
+  border:1px solid #d9e6f7;
+}
+
+.irisPhoneTop{
+  height:26px;
+  border-bottom:1px solid #e0e9f5;
+  background:#f8fbff;
+}
+
+.irisWhatsappIcon{
+  position:absolute;
+  left:50%;
+  top:50%;
+  display:grid;
+  place-items:center;
+  width:82px;
+  height:82px;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:#25d366;
+  color:#fff;
+  box-shadow:0 10px 24px #25d3663a;
+}
+
+.irisWhatsappIcon span{
+  font-size:35px;
+  line-height:1;
+  transform:rotate(-7deg);
+}
+
+.irisPhoneHome{
+  position:absolute;
+  left:50%;
+  bottom:6px;
+  width:34px;
+  height:11px;
+  transform:translateX(-50%);
+  border:2px solid #0b5ddd;
+  border-radius:10px;
+}
+
+.irisWaveBubble{
+  position:absolute;
+  z-index:5;
+  left:18px;
+  top:66px;
+  width:126px;
+  height:94px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:19px;
+  border-radius:24px;
+  background:linear-gradient(135deg,#0b65f7,#127cff);
+  box-shadow:0 18px 38px #0965f638;
+}
+
+.irisWaveBubble:after{
+  content:"";
+  position:absolute;
+  right:18px;
+  bottom:-15px;
+  width:0;
+  height:0;
+  border-left:17px solid transparent;
+  border-top:22px solid #127cff;
+}
+
+.irisWave{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  filter:grayscale(1) brightness(0) invert(1);
+  opacity:.98;
+}
+
+.irisChatBubble{
+  position:absolute;
+  z-index:6;
+  right:0;
+  top:152px;
+  width:92px;
+  height:72px;
+  border:5px solid var(--blue);
+  border-radius:24px;
+  background:#fff;
+  box-shadow:0 14px 32px #0b2d631a;
+}
+
+.irisChatBubble:after{
+  content:"";
+  position:absolute;
+  right:13px;
+  bottom:-16px;
+  width:22px;
+  height:22px;
+  border-right:5px solid var(--blue);
+  border-bottom:5px solid var(--blue);
+  background:#fff;
+  transform:skewY(-35deg);
+}
+
+.irisChatBubble span{
+  position:absolute;
+  top:50%;
+  width:22px;
+  height:6px;
+  border-radius:999px;
+  background:var(--blue);
+}
+
+.irisChatBubble span:first-child{left:18px}
+.irisChatBubble span:last-child{right:18px}
+
+.irisSpark{
+  position:absolute;
+  z-index:7;
+  width:5px;
+  height:22px;
+  border-radius:999px;
+  background:var(--blue);
+}
+
+.sparkOne{
+  right:20px;
+  top:18px;
+  transform:rotate(-7deg);
+}
+
+.sparkTwo{
+  right:2px;
+  top:27px;
+  transform:rotate(34deg);
+}
+
+.sparkThree{
+  right:38px;
+  top:11px;
+  transform:rotate(-28deg);
+}
+
+/* Ajustes responsivos do destaque da Íris */
+@media(max-width:900px){
+  .irisHighlight{
+    grid-template-columns:1fr;
+    padding:40px;
+  }
+
+  .irisContent{
+    max-width:none;
+  }
+
+  .irisVisual{
+    min-height:320px;
+  }
+
+  .irisBackgroundCircle{
+    left:50%;
+    right:auto;
+    transform:translate(-50%,-50%);
+  }
+
+  .irisPhone{
+    left:50%;
+    right:auto;
+    transform:translate(-35%,-50%) rotate(7deg);
+  }
+
+  .irisWaveBubble{
+    left:calc(50% - 170px);
+  }
+
+  .irisChatBubble{
+    right:calc(50% - 175px);
+  }
+
+  .sparkOne{right:calc(50% - 182px)}
+  .sparkTwo{right:calc(50% - 202px)}
+  .sparkThree{right:calc(50% - 164px)}
+}
+
+@media(max-width:560px){
+  .irisHighlight{
+    gap:20px;
+    min-height:0;
+    padding:28px 22px 30px;
+    border-radius:18px;
+  }
+
+  .irisTag{
+    margin-bottom:16px;
+  }
+
+  .irisContent h3{
+    font-size:38px;
+  }
+
+  .irisContent p{
+    font-size:15px;
+    line-height:1.65;
+  }
+
+  .irisButton{
+    width:100%;
+    justify-content:space-between;
+  }
+
+  .irisVisual{
+    min-height:275px;
+    transform:scale(.9);
+    transform-origin:center top;
+  }
+}
