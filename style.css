@@ -261,6 +261,48 @@ footer{max-width:var(--max);margin:auto;padding:52px 0 28px;display:grid;grid-te
   }
 }
 
+/* =========================================================
+   CORREÇÃO RESPONSIVA — SEÇÃO DE SOLUÇÕES
+   Sobrescreve somente no mobile os estilos definidos
+   diretamente no HTML, preservando o layout desktop.
+   ========================================================= */
+
+@media(max-width:820px){
+  .services .irisHighlight{
+    display:block!important;
+    min-height:0!important;
+    padding:30px!important;
+  }
+
+  .services .irisContent{
+    max-width:620px!important;
+    padding-right:0!important;
+  }
+
+  .services .irisButton{
+    position:static!important;
+    inset:auto!important;
+    width:100%;
+    margin-top:18px!important;
+    transform:none!important;
+  }
+
+  .services .serviceGrid{
+    grid-template-columns:1fr!important;
+  }
+}
+
+@media(max-width:560px){
+  .services .irisHighlight{
+    padding:26px 22px!important;
+  }
+
+  .services .serviceCard{
+    min-height:0!important;
+    padding:21px!important;
+  }
+}
+
 /* Celular: uma coluna */
 @media(max-width:820px){
   .serviceGrid{
